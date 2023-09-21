@@ -8,6 +8,9 @@ var participantSchema = new mongoose.Schema(
         type: String,
       },
     ],
+    name: {
+      type: String,
+    },
   },
   {
     timestamps: true,

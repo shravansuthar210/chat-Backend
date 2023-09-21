@@ -37,10 +37,7 @@ const io = socketio(server, {
 });
 const Participant = require("./model/participant");
 io.on("connection", async function (client) {
-  // console.log(client);
   console.log(`Socket ${client.id} connected`);
-
-  // console.log(await Participant.find());
 
   client.on("join chat", ({ participantId, phone }) => {
     client.join(participantId);

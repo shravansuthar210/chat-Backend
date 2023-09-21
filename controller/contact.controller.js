@@ -5,8 +5,8 @@ exports.createParticipant = async (req, res) => {
     if (!req.body) {
       return res.status(400).json("error found");
     }
-    const { mobile } = req.body;
-    const participant = new Participant({ mobile });
+    const { mobile, name } = req.body;
+    const participant = new Participant({ mobile, name });
     const participantSave = await participant.save();
 
     return res.status(200).json({
